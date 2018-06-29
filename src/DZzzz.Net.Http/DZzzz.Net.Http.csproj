@@ -4,4 +4,14 @@
     <TargetFramework>netstandard1.6</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DZzzz.Net.Core\DZzzz.Net.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.ComponentModel.Primitives">
+      <HintPath>C:\Users\Dmitry.Zhuravkin\.nuget\packages\system.componentmodel.primitives\4.3.0\ref\netstandard1.0\System.ComponentModel.Primitives.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

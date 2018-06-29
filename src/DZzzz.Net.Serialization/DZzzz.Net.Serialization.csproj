@@ -4,4 +4,16 @@
     <TargetFramework>netstandard1.6</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Xml\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DZzzz.Net.Core\DZzzz.Net.Core.csproj" />
+  </ItemGroup>
+
 </Project>

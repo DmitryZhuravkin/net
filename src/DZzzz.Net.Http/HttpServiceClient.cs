@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
+
 using DZzzz.Net.Core.Interfaces;
 using DZzzz.Net.Http.Configuration;
 using DZzzz.Net.Http.Interfaces;
@@ -17,7 +18,8 @@ namespace DZzzz.Net.Http
 
         protected ISerializer<string> Serializer { get; }
 
-        public HttpServiceClient(HttpServiceClientConfiguration configuration,
+        public HttpServiceClient(
+            HttpServiceClientConfiguration configuration,
             IHttpClientFactory httpClientFactory,
             ISerializer<string> serializer)
         {
@@ -40,13 +42,16 @@ namespace DZzzz.Net.Http
                 strContent = Serializer.Serialize(data);
             }
 
-            InitRequestHeaders(client.DefaultRequestHeaders, requestHeaders);
+            InitDefaultRequestHeaders(client.DefaultRequestHeaders, requestHeaders);
 
             using (HttpRequestMessage request = new HttpRequestMessage(method, uri))
             {
-                request.Content = new StringContent(strContent);
+                if (!String.IsNullOrEmpty(strContent))
+                {
+                    request.Content = new StringContent(strContent);
+                }
 
-                InitContentHeaders(request.Content.Headers, contentHeaders);
+                InitRequestHeaders(request, contentHeaders);
 
                 using (HttpResponseMessage message = await client.SendAsync(request).ConfigureAwait(false))
                 {
@@ -78,13 +83,16 @@ namespace DZzzz.Net.Http
                 strContent = Serializer.Serialize(data);
             }
 
-            InitRequestHeaders(client.DefaultRequestHeaders, requestHeaders);
+            InitDefaultRequestHeaders(client.DefaultRequestHeaders, requestHeaders);
 
             using (HttpRequestMessage request = new HttpRequestMessage(method, uri))
             {
-                request.Content = new StringContent(strContent);
+                if (!String.IsNullOrEmpty(strContent))
+                {
+                    request.Content = new StringContent(strContent);
+                }
 
-                InitContentHeaders(request.Content.Headers, contentHeaders);
+                InitRequestHeaders(request, contentHeaders);
 
                 using (HttpResponseMessage message = await client.SendAsync(request).ConfigureAwait(false))
                 {
@@ -104,14 +112,14 @@ namespace DZzzz.Net.Http
             return Task.Run(() => response.EnsureSuccessStatusCode());
         }
 
-        private void InitRequestHeaders(HttpRequestHeaders headers, IDictionary<string, string> requestHeaders)
+        protected virtual void InitDefaultRequestHeaders(HttpRequestHeaders headers, IDictionary<string, string> requestHeaders)
         {
             InitHeaders(headers, requestHeaders);
         }
 
-        protected virtual void InitContentHeaders(HttpContentHeaders headers, IDictionary<string, string> contentHeaders)
+        protected virtual void InitRequestHeaders(HttpRequestMessage request, IDictionary<string, string> contentHeaders)
         {
-            InitHeaders(headers, contentHeaders);
+            InitHeaders(request.Headers, contentHeaders);
         }
 
         private void InitHeaders(HttpHeaders headers, IDictionary<string, string> clientHeaders)

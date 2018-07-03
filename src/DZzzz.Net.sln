@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DZzzz.Net.Core", "DZzzz.Net.Core\DZzzz.Net.Core.csproj", "{A1C6A79E-46A0-45BC-B44A-980397A3C120}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DZzzz.Net.Core", "DZzzz.Net.Core\DZzzz.Net.Core.csproj", "{A1C6A79E-46A0-45BC-B44A-980397A3C120}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DZzzz.Net.Serialization", "DZzzz.Net.Serialization\DZzzz.Net.Serialization.csproj", "{987D02BB-0A1E-4B9F-AA74-AAD7518DF33A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DZzzz.Net.Serialization", "DZzzz.Net.Serialization\DZzzz.Net.Serialization.csproj", "{987D02BB-0A1E-4B9F-AA74-AAD7518DF33A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DZzzz.Net.Http", "DZzzz.Net.Http\DZzzz.Net.Http.csproj", "{8B9DCF56-02D4-4F9B-BAA2-35EC6DDEA844}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DZzzz.Net.Http", "DZzzz.Net.Http\DZzzz.Net.Http.csproj", "{8B9DCF56-02D4-4F9B-BAA2-35EC6DDEA844}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -3,5 +3,7 @@
     public class HttpServiceClientConfiguration
     {
         public string BaseUrl { get; set; }
+
+
     }
 }

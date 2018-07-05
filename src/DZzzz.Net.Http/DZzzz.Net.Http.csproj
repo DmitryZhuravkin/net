@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DZzzz.Net.Core\DZzzz.Net.Core.csproj" />
+    <ProjectReference Include="..\DZzzz.Net.Logging\DZzzz.Net.Logging.csproj" />
     <ProjectReference Include="..\DZzzz.Net.Serialization\DZzzz.Net.Serialization.csproj" />
   </ItemGroup>
 

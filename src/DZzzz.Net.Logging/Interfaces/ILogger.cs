@@ -1,7 +1,7 @@
 ﻿using System;
-using DZzzz.Net.Core.Logging;
+using DZzzz.Net.Logging.Model;
 
-namespace DZzzz.Net.Core.Interfaces
+namespace DZzzz.Net.Logging.Interfaces
 {
     public interface ILogger
     {

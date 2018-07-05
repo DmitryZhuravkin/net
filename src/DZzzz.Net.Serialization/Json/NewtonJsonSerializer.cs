@@ -1,4 +1,4 @@
-﻿using DZzzz.Net.Core.Interfaces;
+﻿using DZzzz.Net.Serialization.Interfaces;
 
 using Newtonsoft.Json;
 

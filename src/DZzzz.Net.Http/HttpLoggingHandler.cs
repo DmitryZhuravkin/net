@@ -4,8 +4,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-using DZzzz.Net.Core.Interfaces;
-using DZzzz.Net.Core.Logging;
+using DZzzz.Net.Logging.Interfaces;
+using DZzzz.Net.Logging.Model;
 
 namespace DZzzz.Net.Http
 {

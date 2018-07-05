@@ -1,4 +1,4 @@
-﻿namespace DZzzz.Net.Core.Interfaces
+﻿namespace DZzzz.Net.Serialization.Interfaces
 {
     public interface ISerializer<T>
     {

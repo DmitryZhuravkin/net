@@ -1,4 +1,4 @@
-﻿namespace DZzzz.Net.Core.Logging
+﻿namespace DZzzz.Net.Logging.Model
 {
     public enum LogLevel
     {

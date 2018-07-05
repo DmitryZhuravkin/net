@@ -1,6 +1,5 @@
 ﻿using System;
-
-using DZzzz.Net.Core.Interfaces;
+using DZzzz.Net.Serialization.Interfaces;
 using DZzzz.Net.Serialization.Json;
 
 namespace DZzzz.Net.Http

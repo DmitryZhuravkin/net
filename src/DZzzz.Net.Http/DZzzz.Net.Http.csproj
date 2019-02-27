@@ -9,10 +9,4 @@
     <ProjectReference Include="..\DZzzz.Net.Serialization\DZzzz.Net.Serialization.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="System.ComponentModel.Primitives">
-      <HintPath>C:\Users\Dmitry Zhuravkin\.nuget\packages\system.componentmodel.primitives\4.3.0\ref\netstandard1.0\System.ComponentModel.Primitives.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 </Project>

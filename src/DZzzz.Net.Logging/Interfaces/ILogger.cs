@@ -1,4 +1,5 @@
 ﻿using System;
+
 using DZzzz.Net.Logging.Model;
 
 namespace DZzzz.Net.Logging.Interfaces

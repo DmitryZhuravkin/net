@@ -23,5 +23,10 @@ namespace DZzzz.Net.Http
         {
             return new HttpClient();
         }
+
+        public void Dispose()
+        {
+            httpClient?.Value?.Dispose();
+        }
     }
 }

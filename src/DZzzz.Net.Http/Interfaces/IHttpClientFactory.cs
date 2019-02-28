@@ -1,8 +1,9 @@
-﻿using System.Net.Http;
+﻿using System;
+using System.Net.Http;
 
 namespace DZzzz.Net.Http.Interfaces
 {
-    public interface IHttpClientFactory
+    public interface IHttpClientFactory : IDisposable
     {
         HttpClient GetHttpClient();
     }
